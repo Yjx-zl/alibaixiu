@@ -1,0 +1,174 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #666666;
+}
+a:hover {
+    text-decoration: none;
+}
+body {
+    background-color: #f5f5f5;
+}
+
+/* 我们手动修改为1280px 因为设计稿 是1280px */
+@media screen and (min-width: 1280px) {
+    .container {
+        width: 1280px;
+    }
+}
+.container {
+    background-color: #fff;
+}
+/* header */
+header {
+    padding-left: 0 !important;
+}
+.logo {
+    background-color: #429ad9;
+}
+.logo img {
+    /* width: 100%; */
+
+    /* logo图片不缩放 */
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.logo span {
+    display: block;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav {
+    background-color: #eeeeee;
+    border-bottom: 1px solid #ccc;
+} 
+.nav a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 25px;
+    font-size: 16px;
+}
+.nav a:hover {
+    background-color: #ffffff;
+    color: #333333;
+}
+.nav a::before {
+    /* 字体图标和文字中线对齐 */
+    vertical-align: middle;
+    padding-right: 5px;
+}
+/* 当我们进入 小屏幕 还有超小屏幕的时候 我们 nav 里面的li 浮动起来 并且宽度为20% */
+@media screen and (max-width: 991px) {
+    .nav ul li {
+        float: left;
+        width: 20%;
+    } 
+}
+/* 当我们进入超小屏幕的时候 我们 nav 里面的文字变成14px*/
+@media screen and (max-width: 767px){
+    .nav ul li a {
+        font-size: 14px;
+        padding-left: 3px;
+    }
+
+    /* 当我们处于超小屏幕 news 第一个li 宽度为100% 剩下的小li 各 50% */
+    .news li:nth-child(1) {
+        width: 100% !important;
+    }
+    .news li {
+        width: 50%!important;
+    }
+
+    .pubfish h3 {
+        font-size: 14px;
+    }
+}
+
+/* article */
+.news ul li {
+    float: left;
+    width: 25%;
+    height: 128px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+.news ul li:nth-child(1) {
+    width: 50%;
+    height: 266px;
+}
+.news a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.news a img {
+    width: 100%;
+    height: 100%;
+}
+.news li:nth-child(1) p {
+    line-height: 41px;
+    font-size: 20px;
+    padding: 0 10px;
+}
+.news li a p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 41px;
+    margin-bottom: 0;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+/* pubfish */
+.pubfish {
+    /* overflow: hidden; */
+    border-top: 1px solid #ccc;
+}
+.pubfish .row {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.pic {
+    margin-top: 10px;
+}
+.pic img {
+    width: 100%;
+}
+/* aside */
+.banner img {
+    width: 100%;
+}
+
+.hot {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 0px 20px 20px;
+}
+.hot h4 {
+    margin-top: 30px;
+}
+
+.hot p {
+    font-size: 12px;
+    /* 文字两行显示 超出省略号显示 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
